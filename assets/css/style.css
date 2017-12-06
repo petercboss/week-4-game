@@ -1,0 +1,19 @@
+body {
+    font-family: 'Mystery Quest', cursive;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+
+.title {
+    padding: 5px;
+    background: repeating-radial-gradient(circle, purple,
+    purple 10px,
+    #4b026f 10px, 
+    #4b026f 20px);
+    color: white;
+    border: 3px solid yellow;
+}
+
+.fighters {
+    background-color: black;
+}
