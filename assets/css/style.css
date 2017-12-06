@@ -15,5 +15,26 @@ body {
 }
 
 .fighters {
-    background-color: black;
+    background: transparent;
+    padding: 5px;
+}
+
+.col-md-3 {
+    padding: 5px;
+}
+
+.col-md-3 img {
+    width: 80%;
+    height: 150px;
+    display: block;
+    margin: auto;
+    border: solid 2px black;
+    border-radius: 5%;
+}
+
+.col-md-3 p {
+    color: white;
+    text-align: center;
+    text-shadow: -1px 0px black;
+    line-height: 15px;
 }
