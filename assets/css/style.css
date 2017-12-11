@@ -55,7 +55,7 @@ body {
 }
 
 #selected img {
-    border: solid 2px black;
+    border: solid 10px green;
 }
 
 .vibe {

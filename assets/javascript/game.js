@@ -49,6 +49,7 @@ for (var i = 0; i < objectKey.length; i++) {
 $("#instructions").html("<h3>Choose Your Soulmate!!</h3>");
 
 // Choose hero and opponent
+
 function choose() {
     $(".champions").on("click", ".hero", function() {
         var currentHero = $(this).attr("data-name");
