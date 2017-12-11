@@ -78,8 +78,8 @@ $( document ).ready(function() {
 //  Attack
 
     $("#attack").on("click", function() {
-        enemyChosen.health = heroChosen.attack - enemyChosen.health;
-        heroChosen.health = enemyChosen.counter - heroChosen.health;
+        enemyChosen.health = enemyChosen.health - heroChosen.attack;
+        heroChosen.health = heroChosen.health - enemyChosen.counter;
         $("#selected .life").html(heroChosen.health);
         $("#opponent .life").html(enemyChosen.health);
         $(".fight-words").html("You vibed " + enemyChosen.name + " for " + heroChosen.attack + ". " + enemyChosen.name + " sent bad vibes back for " + enemyChosen.counter + ".");
@@ -88,9 +88,8 @@ $( document ).ready(function() {
         if (heroChosen.health <= 0) {
             $(".fight-words").html("Bad vibes got the worst of you. Game Over.");
             $("#attack").off("click");
-        };
-
-        if (enemyChosen.health <= 0) {
+        }
+        else if (enemyChosen.health <= 0) {
             wins++;
             enemyChosen = null;
             $("#opponent").empty();
