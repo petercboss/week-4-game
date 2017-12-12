@@ -1,7 +1,7 @@
 body {
     font-family: 'Mystery Quest', cursive;
     background-image: url("../images/background.jpg");
-    background-size: cover;
+    background-size: 100%;
 }
 
 .title {

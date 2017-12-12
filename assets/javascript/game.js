@@ -39,6 +39,7 @@ var fighters = {
 var wins = 0;
 var heroChosen = null;
 var enemyChosen = null;
+var currentAttack = 0;
 var objectKey = Object.keys(fighters);
 for (var i = 0; i < objectKey.length; i++) {
     var fighterKey = objectKey[i];
@@ -72,19 +73,19 @@ function choose() {
 
 // Click functions
 
-$( document ).ready(function() {
+$(document).ready(function() {
 
     choose();
 
 //  Attack
 
     $("#attack").on("click", function() {
-        enemyChosen.health = enemyChosen.health - heroChosen.attack;
+        currentAttack = heroChosen.attack + currentAttack;
+        enemyChosen.health = enemyChosen.health - currentAttack;
         heroChosen.health = heroChosen.health - enemyChosen.counter;
         $("#selected .life").html(heroChosen.health);
         $("#opponent .life").html(enemyChosen.health);
-        $(".fight-words").html("You vibed " + enemyChosen.name + " for " + heroChosen.attack + ". " + enemyChosen.name + " sent bad vibes back for " + enemyChosen.counter + ".");
-        heroChosen.attack = eval(heroChosen.attack * 2);
+        $(".fight-words").html("You vibed " + enemyChosen.name + " for " + currentAttack + ". " + enemyChosen.name + " sent bad vibes back for " + enemyChosen.counter + ".");
 
         if (heroChosen.health <= 0) {
             $(".fight-words").html("Bad vibes got the worst of you. Game Over.");
