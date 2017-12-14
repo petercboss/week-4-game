@@ -3,24 +3,24 @@
 var fighters = {
     coolman: {
         health: 120,
-        attack: 8,
-        counter: 15,
+        attack: 14,
+        counter: 10,
         img: "assets/images/hippie1.jpg",
         name: "Cool Man",
     },
 
     flower: {
         health: 180,
-        attack: 7,
-        counter: 25,
+        attack: 10,
+        counter: 12,
         img: "assets/images/hippie2.jpg",
         name: "Flower Children",
     },
 
     peace: {
-        health: 100,
-        attack: 14,
-        counter: 5,
+        health: 130,
+        attack: 12,
+        counter: 16,
         img: "assets/images/hippie3.jpg",
         name: "Peace Train",
     },
@@ -28,7 +28,7 @@ var fighters = {
     sweetbro: {
         health: 150,
         attack: 8,
-        counter: 20,
+        counter: 14,
         img: "assets/images/hippie4.jpg",
         name: "Sweet Bro",
     }
